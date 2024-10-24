@@ -25,6 +25,9 @@ int square(int a){
 int cube(int a){
     return (a*a*a);
 }
+double inverse(double a){
+    return (1.0/a);
+}
 int main() {
     int a, b;
     char operation;
@@ -79,7 +82,11 @@ int main() {
             case 'i':
                 printf("Enter an integer: ");
                 scanf("%d", &a);
-                printf("Will be implemented soon...\n");
+		if(a!=0){	
+                printf("the result of %.2f is %.2f\n",a,inverse (a));
+		}else{
+			printf("inverse of 0 is undefined.\n");
+		}	
                 break;
             default:
                 printf("Invalid operation. Please try again.\n");
